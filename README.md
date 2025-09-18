@@ -8,11 +8,11 @@ You can include the library in two ways:
 
 ### 1. Remote Script
 ```html
-<script src="https://cdn.jsdelivr.net/gh/magland/stan-playground-embed@main/stan-playground-embed-v1.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/magland/stan-playground-embed@main/stan-playground-embed-v2.js"></script>
 ```
 
 ### 2. Include the Script Directly
-Copy the `stan-playground-embed-v1.js` file into your project and include it in your HTML.
+Copy the `stan-playground-embed-v2.js` file into your project and include it in your HTML.
 
 ### Basic Example
 ```html

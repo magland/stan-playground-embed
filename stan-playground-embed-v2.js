@@ -3,9 +3,14 @@ Define a custom HTML element <stan-playground-embed> that embeds a Stan Playgrou
 
 Usage:
 <stan-playground-embed>
-  <iframe width="100%" height="500" frameborder="0"></iframe>
-  <script type="text/plain" class="stan-program"> ... Stan program ...
-  <script type="text/plain" class="stan-data"> ... JSON data ...
+<iframe width="100%" height="500" frameborder="0"></iframe>
+
+<script type="text/plain" class="stan-program">
+... Stan program ...
+
+<script type="text/plain" class="stan-data">
+... JSON data ...
+
 </stan-playground-embed>
 
 (The closing tags for the script elements are omitted above to avoid HTML parsing issues.)
@@ -54,9 +59,6 @@ class StanPlaygroundEmbed extends HTMLElement {
 
     // Set iframe src
     this.iframe.src = `https://stan-playground.flatironinstitute.org/?stan=${stanUrl}&data=${dataUrl}`;
-
-    // Insert iframe at the start of the custom element
-    this.insertBefore(this.iframe, this.firstChild);
   }
 }
 
