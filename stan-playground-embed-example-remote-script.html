@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stan Playground Embed</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+</style>
+
+<script src="https://cdn.jsdelivr.net/gh/magland/stan-playground-embed@main/stan-playground-embed.js"></script>
+</head>
+
+<body>
+<div class="container">
+<h1>Stan Playground Demo</h1>
+<p>
+Here's an example of embedding a Stan model using the custom <code>&lt;stan-playground-embed&gt;</code> element.
+</p>
+
+<!-- First example -->
+<stan-playground-embed>
+<iframe width="100%" height="500" frameborder="0"></iframe>
+<script type="text/plain" class="stan-program">
+data {
+  int<lower=0> N;
+  vector[N] x;
+  vector[N] y;
+}
+parameters {
+  real alpha;
+  real beta;
+  real<lower=0> sigma;
+}
+model {
+  y ~ normal(alpha + beta * x, sigma);
+}
+</script>
+<script type="text/plain" class="stan-data">
+{
+  "N": 10,
+  "x": [1,2,3,4,5,6,7,8,9,10],
+  "y": [
+    3.5164361480858806,
+    1.9422090649104387,
+    3.856878064212197,
+    5.8081366125433025,
+    7.727339580090061,
+    7.974795841003987,
+    9.775364868869321,
+    10.737390454859584,
+    12.557258326283772,
+    15.382774755732974
+  ]
+}
+</script>
+</stan-playground-embed>
+
+<p>More text here to show that the iframe is just part of the page.</p>
+<p>
+  You can have multiple such blocks on the same page, each with its own
+  Stan program and data.
+</p>
+
+<!-- Second example -->
+<stan-playground-embed>
+<iframe width="100%" height="1200"></iframe>
+<script type="text/plain" class="stan-program">
+data {
+  int N;
+  vector[N] x;
+  array[N] int y;  // count outcomes
+}
+parameters {
+  real alpha;
+  real beta;
+}
+model {
+  // Priors
+  alpha ~ normal(0, 10);
+  beta ~ normal(0, 10);
+
+  // Likelihood
+  y ~ poisson_log(alpha + beta * x);
+}
+</script>
+<script type="text/plain" class="stan-data">
+{
+  "N": 8,
+  "x": [1, 2, 3, 4, 5, 6, 7, 8],
+  "y": [2, 3, 6, 8, 13, 17, 26, 41]
+}
+</script>
+</stan-playground-embed>
+
+<p>
+Below is a demonstration of how to embed Stan playgrounds dynamically using JavaScript.
+</p>
+
+<script>
+// Example function to dynamically add a new Stan playground
+function addNewStanPlayground() {
+  const container = document.querySelector(".container");
+
+  // Create new stan-playground-embed element
+  const embed = document.createElement("stan-playground-embed");
+  embed.setAttribute("height", "800");
+
+  // Add iframe
+  const iframe = document.createElement("iframe");
+  iframe.style.width = "100%";
+  iframe.setAttribute("height", "800");
+  iframe.setAttribute("frameborder", "0");
+  embed.appendChild(iframe);
+
+  // Add program
+  const program = document.createElement("script");
+  program.type = "text/plain";
+  program.className = "stan-program";
+  program.textContent = `data {
+int N;
+array[N] int y;
+}
+parameters {
+real<lower=0> lambda;
+}
+model {
+lambda ~ gamma(2,1);
+y ~ poisson(lambda);
+}`;
+
+  // Add data
+  const data = document.createElement("script");
+  data.type = "text/plain";
+  data.className = "stan-data";
+  data.textContent = `{
+"N": 5,
+"y": [2, 3, 4, 2, 1]
+}`;
+
+  // Assemble and add to page
+  embed.appendChild(program);
+  embed.appendChild(data);
+  container.appendChild(embed);
+}
+</script>
+
+<!-- Button to add new playground -->
+<button onclick="addNewStanPlayground()">Add New Stan Playground</button>
+</div>
+</body>
+</html>
