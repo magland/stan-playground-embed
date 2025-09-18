@@ -27,6 +27,8 @@ Copy the `stan-playground-embed-v1.js` file into your project and include it in 
 </stan-playground-embed>
 ```
 
+See a [live example here](https://magland.github.io/stan-playground-embed/stan-playground-embed-example-remote-script).
+
 The component requires three elements:
 - An `iframe` for displaying the Stan Playground
 - A script element with class `stan-program` containing your Stan model
