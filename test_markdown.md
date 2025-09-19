@@ -1,12 +1,7 @@
----
-layout: default
----
-
 <script src="https://cdn.jsdelivr.net/gh/magland/stan-playground-embed@main/stan-playground-embed-v2.js"></script>
 
 This is to demonstrate how to embed stan-playground in a markdown file that can be rendered on GitHub pages.
 
-<div>
 <stan-playground-embed>
 <iframe width="100%" height="500" frameborder="0"></iframe>
 <script type="text/plain" class="stan-program">
@@ -43,6 +38,5 @@ model {
 }
 </script>
 </stan-playground-embed>
-</div>
 
 If it worked, you should see an embedded Stan Playground above with a simple linear regression model and some example data.
