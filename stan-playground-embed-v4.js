@@ -7,13 +7,13 @@ Usage:
 
 <script type="text/plain" class="stan-program">
 ... Stan program ...
+</script>
 
 <script type="text/plain" class="stan-data">
 ... JSON data ...
+</script>
 
 </stan-playground-embed>
-
-(The closing tags for the script elements are omitted above to avoid HTML parsing issues.)
 */
 class StanPlaygroundEmbed extends HTMLElement {
   constructor() {
