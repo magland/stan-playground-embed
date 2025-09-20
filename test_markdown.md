@@ -1,9 +1,9 @@
-<script src="https://cdn.jsdelivr.net/gh/magland/stan-playground-embed@main/stan-playground-embed-v2.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/magland/stan-playground-embed@main/stan-playground-embed-v4.js"></script>
 
 This is to demonstrate how to embed stan-playground in a markdown file that can be rendered on GitHub pages.
 
 <stan-playground-embed>
-<iframe width="100%" height="500" frameborder="0"></iframe>
+<iframe width="100%" height="700" frameborder="0"></iframe>
 <script type="text/plain" class="stan-program">
 data {
   int<lower=0> N;
