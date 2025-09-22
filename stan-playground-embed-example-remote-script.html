@@ -127,14 +127,14 @@ function addNewStanPlayground() {
   program.className = "stan-program";
   program.textContent = `data {
 int N;
-array[N] int y;
+  array[N] int y;
 }
 parameters {
-real<lower=0> lambda;
+  real<lower=0> lambda;
 }
 model {
-lambda ~ gamma(2,1);
-y ~ poisson(lambda);
+  lambda ~ gamma(2,1);
+  y ~ poisson(lambda);
 }`;
 
   // Add data
@@ -142,8 +142,8 @@ y ~ poisson(lambda);
   data.type = "text/plain";
   data.className = "stan-data";
   data.textContent = `{
-"N": 5,
-"y": [2, 3, 4, 2, 1]
+  "N": 5,
+  "y": [2, 3, 4, 2, 1]
 }`;
 
   // Assemble and add to page
