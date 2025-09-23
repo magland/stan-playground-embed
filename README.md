@@ -8,11 +8,11 @@ You can include the library in two ways:
 
 ### 1. Remote Script
 ```html
-<script src="https://cdn.jsdelivr.net/gh/magland/stan-playground-embed@main/stan-playground-embed-v4.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/magland/stan-playground-embed@main/stan-playground-embed-v5.js"></script>
 ```
 
 ### 2. Include the Script Directly
-Copy the `stan-playground-embed-v4.js` file into your project and include it in your HTML.
+Copy the `stan-playground-embed-v5.js` file into your project and include it in your HTML.
 
 ### Basic Example
 ```html
@@ -30,8 +30,8 @@ Copy the `stan-playground-embed-v4.js` file into your project and include it in 
 ### Live Examples
 
 
-- [HTML example](https://magland.github.io/stan-playground-embed/stan-playground-embed-example-remote-script) ([source](https://github.com/magland/stan-playground-embed/blob/main/stan-playground-embed-example-remote-script.html))
-- [Markdown example](https://magland.github.io/stan-playground-embed/test_markdown) ([source](https://github.com/magland/stan-playground-embed/blob/main/test_markdown.md))
+- [HTML example](./stan-playground-embed-example-remote-script) ([source](https://github.com/magland/stan-playground-embed/blob/main/stan-playground-embed-example-remote-script.html))
+- [Markdown example](test_markdown) ([source](./test_markdown.md))
 
 The component requires three elements:
 - An `iframe` for displaying the Stan Playground

@@ -60,7 +60,7 @@ class StanPlaygroundEmbed extends HTMLElement {
     const dataUrl = encodePlain(stanData);
 
     // Set iframe src
-    this.iframe.src = `https://stan-playground-staging.vercel.app/embedded?stan=${stanUrl}&data=${dataUrl}`;
+    this.iframe.src = `https://stan-playground-staging.vercel.app/embedded?stan=${encodeURIComponent(stanUrl)}&data=${encodeURIComponent(dataUrl)}`;
   }
 }
 
@@ -120,7 +120,7 @@ model {
 </p>
 
 <!-- Second example -->
-<stan-playground-embed>
+<stan-playground-embed-disable>
 <iframe width="100%" height="800"></iframe>
 <script type="text/plain" class="stan-program">
 data {
