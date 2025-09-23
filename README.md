@@ -30,8 +30,8 @@ Copy the `stan-playground-embed-v5.js` file into your project and include it in 
 ### Live Examples
 
 
-- [HTML example](./stan-playground-embed-example-remote-script) ([source](https://github.com/magland/stan-playground-embed/blob/main/stan-playground-embed-example-remote-script.html))
-- [Markdown example](test_markdown) ([source](./test_markdown.md))
+- [HTML example](https://magland.github.io/stan-playground-embed/stan-playground-embed-example-remote-script) ([source](https://github.com/magland/stan-playground-embed/blob/main/stan-playground-embed-example-remote-script.html))
+- [Markdown example](https://magland.github.io/stan-playground-embed/test_markdown) ([source](./test_markdown.md))
 
 The component requires three elements:
 - An `iframe` for displaying the Stan Playground
