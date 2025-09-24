@@ -8,7 +8,7 @@ You can include the library in two ways:
 
 ### 1. Remote Script
 ```html
-<script src="https://cdn.jsdelivr.net/gh/magland/stan-playground-embed@main/stan-playground-embed-v6.js"></script>
+<script src="https://stan-playground.flatironinstitute.org/stan-playground-embed.js"></script>
 ```
 
 ### 2. Include the Script Directly

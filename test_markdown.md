@@ -1,4 +1,4 @@
-<script src="https://cdn.jsdelivr.net/gh/magland/stan-playground-embed@main/stan-playground-embed-v6.js"></script>
+<script src="https://stan-playground.flatironinstitute.org/stan-playground-embed.js"></script>
 
 This is to demonstrate how to embed stan-playground in a markdown file that can be rendered on GitHub pages.
 
